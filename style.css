@@ -1,0 +1,294 @@
+body {
+	background: #ccc url("../img/background.jpg") repeat;
+	font-family: 'Abel', cursive;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+/*Titlul paginii desupra continutului*/
+
+body h1 {
+	margin-top: 30px;
+	color: #fff;
+	text-align: center;
+}
+
+/*fundalul alb*/
+
+.wrapper {
+	max-width: 1024px;
+	max-height: 768px;
+	padding: 1%; 
+	margin: 0 auto;
+	background-color: #eee;
+}
+
+
+/*container stanga: Mesaje*/
+
+#fereastra-chat {
+	width: 63.5%;
+	height: 500px;
+	margin: 0 0 0 2.5%;
+	float: left;
+	display: inline;
+	background-color: #fff;
+	overflow-y: scroll;
+	padding: 2%;
+	box-shadow: 2px 2px 10px #aaa;
+}
+
+#fereastra-chat p {
+	margin: 0;
+	font-family: 'Abel', cursive;
+	font-weight: normal;
+}
+
+/*sectiune drepata: Participanti*/
+
+#sectiune-participanti {
+	width: 25%;
+	height: 500px;
+	margin: 0 2.5%;
+	float: left;
+	background-color: #fff;
+	display: inline;
+	box-shadow: 2px 2px 10px #aaa;
+	padding: 2% 0;
+	overflow: scroll;
+}
+
+#participanti-wapper {
+	overflow: hidden;
+}
+
+
+.titlu-participanti {
+	text-align: center;
+	line-height: 40px;
+	height: 40px;
+	margin: 0 2% ;
+	padding: 0;
+}
+.titlu-participanti h3 { /*titlu - culoare , font*/
+	margin: 0 0 3% 0;
+	padding: 0;
+	
+	/*line-height: 40px;*/
+	display: inline;
+	font-family: 'Mogra', cursive;
+	font-weight:100;
+	color: #0f9db5;
+
+}
+
+.participanti-icon { /*containerul care contine lista cu participanti - scroll*/
+	
+	position: relative;
+	height:97.5%;
+	overflow-y: scroll;
+	
+}
+
+
+/*participanti poze si nume*/
+.participanti-icon ul {
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
+
+.participanti-icon ul li {
+	list-style: none;
+	height: auto;
+	width:95%;
+	margin :0 2.5%;
+	border-bottom: 1px #eee solid;
+	padding: 15px 0;
+}
+.participanti-icon ul li p {
+	padding: 0;
+	margin: 0;
+	font-family: 'Abel', cursive;
+	font-weight:100;
+}
+
+
+#sectiune-participanti-redus {
+	text-align: center;
+	position: relative;
+	display: none;
+	overflow: scroll;
+		
+}
+
+.participant-redus img{
+	height: 40px;
+	width: 40px;
+
+}
+
+.arrow {
+	background-image: url(../img/icon-left.png);
+	margin: 0 auto; 
+}
+
+.arrow:hover {
+	background-image: url(../img/icon-left-hover.png);
+}
+
+.arrow2 {
+	background-image: url(../img/icon-right.png);
+}
+
+.arrow2:hover {
+	background-image: url(../img/icon-right-hover.png);
+}
+
+
+/*sectiune jos*/
+
+.poza-text-emoji{
+	
+	width: 61%;
+	margin: 2.5%;
+	height: 100%;
+	clear: left;
+	display: inline-block;
+	padding: 2%;
+	/*background-color: red;*/
+}
+
+.profile-pic {
+	float: left;
+	height: 100%;
+}
+
+.imput-message {
+float: right;
+height: 110px;
+background-color: #fff;
+border: 1px solid #ddd;
+border-radius: 5px;
+width:80%;
+}
+.mesaj {
+	float: left;
+	width: 74%;
+	height: 100%;
+}
+
+.mesaj textarea {
+	margin:0;
+	width: 100%;
+	height: 100%;
+	resize: none;
+	border:none;
+	padding: 5px;;
+	box-sizing: border-box;
+}
+
+
+.emoji {
+	float:right;
+	width: 25%;
+	text-align: center;
+	line-height: 110px;
+	background-color: #fff;
+	max-height: 110px;
+	z-index: 101;
+}
+
+
+.emoji img {
+	width: 110px;
+	height: 110px;
+	
+}
+
+.emoji img:hover {
+	cursor: pointer;
+}
+
+#emoji-ul {
+	visibility: hidden;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	
+
+	margin-top: -270px;
+	margin-left: -180px;
+	line-height: 20px;
+	list-style: none;
+	float: left;
+	display: inline;
+	z-index: 102;
+	padding: 0;
+	width: auto;
+	height: 110px;
+}
+
+#emoji-ul img {
+	/*display: hidden;*/
+	max-height: 30px;
+	z-index: 201;
+	margin: 2px;
+	width: 25px;
+	height: 25px;
+	
+
+}
+#emoji-ul li {
+	float: left;
+	display: inline-block;
+}
+
+.send-btn {
+	width: 25%;
+	margin: 2.5% ;
+	padding: 0%;
+	background-color: #0f9db5;
+	float: right;
+	font-family: Abel;
+	font-weight: bold;
+	font-size: 50px;
+	color: #fff;
+	text-align: center;
+}
+
+.send-btn p {
+	
+	display: inline-block;
+}
+
+.send-btn:hover {
+	background-color: #ffd400;
+	color: #444;
+	cursor: pointer;
+}
+.send-btn:active {
+	background-color: #eec300;
+	color: #444;
+
+}
+
+/*******************************GENERAL**************************************/
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
