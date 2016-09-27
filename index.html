@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>4. Chat</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"> <!--Pentru a selecta widh-ul curent al masinii-->
+		<link rel="stylesheet" href="css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Mogra" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+	</head>
+
+	<body>
+		
+		<h1>4. Chat application</h1>
+		
+		<div class="wrapper">
+			<div id="fereastra-chat"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+			<p><strong>Me</strong>: Lorem ipsum dolor sit amet, consectetur adipiscing elit</p></div>
+			
+			<div id="sectiune-participanti">
+				<div id="participanti-wapper">
+					<div class="titlu-participanti">
+						<h3 >Participanti</h3>
+						<div class="arrow2" onclick="schimb()" style="height:40px; width:40px; display: inline-block; float: right; "></div>
+					</div>
+					<div class="participanti-icon">
+						<ul>
+							<li class="participant">
+								<img src="img/participant1.png">
+								<p class="nume-part">Alice Monty</p>
+							</li>
+							<li class="participant">
+								<img src="img/participant5.png">
+								<p class="nume-part">Gore Lemnaru</p>
+							</li>
+							<li class="participant">
+								<img src="img/participant4.png">
+								<p class="nume-part">Jim Morrison</p>
+							</li>
+							<li class="participant">
+								<img src="img/participant2.png">
+								<p class="nume-part">Functionara 41</p>
+							</li>
+							<li class="participant">
+								<img src="img/participant.png">
+								<p class="nume-part">Dinu Faceless</p>
+							</li>
+							<li class="participant">
+								<img src="img/participant.png">
+								<p class="nume-part">Marcu Faceless</p>
+							</li>
+							</li>
+							<li class="participant">
+								<img src="img/participant3.png">
+								<p class="nume-part">Marcel Studentu'</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div id="sectiune-participanti-redus">
+					<ul>
+						<li class="participant-redus">
+							<div class="arrow" onclick="schimb()" style="height:40px; width:40px;"></div>
+						</li>
+						<li class="participant-redus">
+							<img src="img/participant1.png" title="Alice Monty">
+						</li>
+						<li class="participant-redus" >
+							<img src="img/participant5.png" title="Gore Lemnaru">
+						</li>
+						<li class="participant-redus" >
+							<img src="img/participant4.png" title="Jim Morrison">
+						</li>
+						<li class="participant-redus" >
+							<img src="img/participant2.png" title="Functionara 41">
+						</li>
+						<li class="participant-redus" >
+							<img src="img/participant.png" title="Dinu Faceless">
+						</li>
+						<li class="participant-redus" >
+							<img src="img/participant.png" title="Marcu Faceless">
+						</li>
+						<li class="participant-redus" >
+							<img src="img/participant3.png" title="Marcel Studentu'">
+						</li>
+					</ul>
+				</div>
+
+				
+				
+			</div>
+			
+			
+			<div class="poza-text-emoji">
+				<div class="poza-text">
+					<img class="profile-pic" src="img/profile-pic.png">
+					<div class="imput-message">
+						<div class="mesaj"><textarea id="textar" onkeypress="pressEnt(event)"></textarea></div>
+						<div class="emoji">
+							<img  class="imagine" src="img/smile.png" onclick="iesSmile()">
+							<ul id="emoji-ul">
+								<li><img src="img/smile.png" onclick="iesSmile()"></li>
+								<li><img src="img/smile.png" onclick="iesSmile()"></li>
+								<li><img src="img/smile.png" onclick="iesSmile()"></li>
+								<li><img src="img/smile.png" onclick="iesSmile()"></li>
+								<li><img src="img/smile.png" onclick="iesSmile()"></li>
+								<li><img src="img/smile.png" onclick="iesSmile()"></li>
+								<li><img src="img/smile.png" onclick="iesSmile()"></li>
+								<li><img src="img/smile.png" onclick="iesSmile()"></li>
+								<li><img src="img/smile.png" onclick="iesSmile()"></li>
+							</ul>
+						</div>	
+					</div>	
+					
+				</div>
+			</div>
+			<div class="send-btn noselect" onclick="sendtext()">
+				<i class="fa fa-paper-plane" aria-hidden="true"></i>
+				<p>Send</p>
+			</div>
+		</div>
+		<script src="js/javascript.js"></script>
+	</body>
+</html>
