@@ -1,9 +1,13 @@
+html {
+      scroll-behavior: smooth;
+    }
+
 body {
 	background: #ccc url("../img/background.jpg") repeat;
 	font-family: 'Abel', cursive;
 }
 
-::-webkit-scrollbar { 
+#participanti-icon::-webkit-scrollbar, #sectiune-participanti-redus::-webkit-scrollbar { 
     display: none; 
 }
 
@@ -35,9 +39,13 @@ body h1 {
 	float: left;
 	display: inline;
 	background-color: #fff;
-	overflow-y: scroll;
+	overflow-y:hidden;
 	padding: 2%;
 	box-shadow: 2px 2px 10px #aaa;
+}
+
+#fereastra-chat:hover {
+	overflow-y: auto;
 }
 
 #fereastra-chat p {
@@ -57,22 +65,34 @@ body h1 {
 	display: inline;
 	box-shadow: 2px 2px 10px #aaa;
 	padding: 2% 0;
-	overflow: scroll;
+	overflow: hidden;
+
+	transition: background, box-shadow;
+	transition-duration: .8s;
 }
+
+
 
 #participanti-wapper {
+	position: relative;
 	overflow: hidden;
+	height: 100%;
+	opacity: 1;
+	transition: opacity .8s;
+
 }
 
 
-.titlu-participanti {
+#titlu-participanti {
 	text-align: center;
 	line-height: 40px;
 	height: 40px;
 	margin: 0 2% ;
 	padding: 0;
+	
+	transition: opacity .8s;
 }
-.titlu-participanti h3 { /*titlu - culoare , font*/
+#titlu-participanti h3 { /*titlu - culoare , font*/
 	margin: 0 0 3% 0;
 	padding: 0;
 	
@@ -84,23 +104,28 @@ body h1 {
 
 }
 
-.participanti-icon { /*containerul care contine lista cu participanti - scroll*/
+#participanti-icon { /*containerul care contine lista cu participanti - scroll*/
 	
 	position: relative;
 	height:97.5%;
 	overflow-y: scroll;
 	
+	transition: opacity .8s;
+	
+
+	
 }
 
 
+
 /*participanti poze si nume*/
-.participanti-icon ul {
+#participanti-icon ul {
 	padding: 0;
 	margin: 0;
 	text-align: center;
 }
 
-.participanti-icon ul li {
+#participanti-icon ul li {
 	list-style: none;
 	height: auto;
 	width:95%;
@@ -108,7 +133,7 @@ body h1 {
 	border-bottom: 1px #eee solid;
 	padding: 15px 0;
 }
-.participanti-icon ul li p {
+#participanti-icon ul li p {
 	padding: 0;
 	margin: 0;
 	font-family: 'Abel', cursive;
@@ -117,11 +142,14 @@ body h1 {
 
 
 #sectiune-participanti-redus {
+	opacity:0;
 	text-align: center;
 	position: relative;
-	display: none;
+	
 	overflow: scroll;
-		
+
+	transition: opacity .8s;
+			
 }
 
 .participant-redus img{
@@ -180,7 +208,7 @@ width:80%;
 	height: 100%;
 }
 
-.mesaj textarea {
+#textar {
 	margin:0;
 	width: 100%;
 	height: 100%;
@@ -188,6 +216,7 @@ width:80%;
 	border:none;
 	padding: 5px;;
 	box-sizing: border-box;
+
 }
 
 
@@ -212,8 +241,16 @@ width:80%;
 	cursor: pointer;
 }
 
+.emoji li img:active {
+	transform: translatey(-3px);
+}
+
+.imagine:active {
+	transform: scale(0.9);
+}
+
 #emoji-ul {
-	visibility: hidden;
+	opacity: 0;
 	background-color: #fff;
 	border: 1px solid #ccc;
 	border-radius: 4px;
@@ -229,6 +266,10 @@ width:80%;
 	padding: 0;
 	width: auto;
 	height: 110px;
+
+
+	transition: all 1s ;
+	transform: translatey(-3px);
 }
 
 #emoji-ul img {
@@ -244,6 +285,7 @@ width:80%;
 #emoji-ul li {
 	float: left;
 	display: inline-block;
+
 }
 
 .send-btn {
@@ -257,6 +299,7 @@ width:80%;
 	font-size: 50px;
 	color: #fff;
 	text-align: center;
+	transition-duration: 0.8s;
 }
 
 .send-btn p {
@@ -268,11 +311,15 @@ width:80%;
 	background-color: #ffd400;
 	color: #444;
 	cursor: pointer;
+	transition: background-color, color;
+	transition-duration: .4s;
+
 }
 .send-btn:active {
 	background-color: #eec300;
 	color: #444;
-
+	transform: translate(1px, 1px);
+	
 }
 
 /*******************************GENERAL**************************************/
